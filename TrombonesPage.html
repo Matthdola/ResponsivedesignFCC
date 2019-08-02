@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Landing Page</title>
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!--
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+        -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Lato', sans-serif;
+                background-color: #eee;
+                margin: auto;
+            }
+
+            #page-wrapper {
+                position: relative;
+            }
+
+            .navbar-dark {
+                background-color:  #FFD180;
+            }
+
+            .rightTab {
+                border-radius: 0;
+            } 
+
+            .jumbotron {
+                background-color: #424242;
+                margin: 0px auto;
+                padding: 0px 0px 20px 0px;
+                color: white;
+                border-radius: 0;
+            }   
+
+            .container {
+                max-width: 1000px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            #header {
+                top: 0;
+                min-height: 40px;
+                padding: 0px 0px;
+                display: flex;
+                justify-content: space-arround;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 100px;
+                width: 100%;
+            }  
+
+            .description {
+                font-size: 1.1em;
+            }
+
+            #nav-bar {
+                width: 100%;
+            } 
+
+            .type-of-product {
+                border: black 1px solid;
+                border-radius: 0px;
+                
+            }
+
+            .card-header {
+                background-color:#ddd;
+                font-size: 1.0em;
+            }
+
+            footer {
+                margin-top: 30px;
+                background-color: #ddd;
+                padding: 20px;
+                font-size: 0.80em;
+            }
+
+            #hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 200px;
+                margin-top: 100px;
+            }
+
+            #hero  h2 {
+                margin-bottom: 20px;
+                word-wrap: break-word;
+            }
+
+            #pricing {
+                margin-top: 60px;
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (max-width: 800px){
+                #pricing {
+                    flex-direction: column;
+                }
+            }
+
+            #how-it-works {
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+            }
+
+            #features {
+                margin-top: 30px;
+            }
+
+            div {
+                width: 95%;
+                margin: auto;
+            }
+            #copyright-text {
+                font-size: 0.8em;
+            }
+        </style>
+    </head>
+  
+    <body>
+        <div id="page-wrapper">
+            <header id="header" class="jumbotron">
+                <nav id="nav-bar" class="navbar navbar-dark navbar-expand-sm fixed-top">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a id="header-img" class="navbar-brand navbar-collapse" href="#">
+                            <img  src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" height="30" width="40" alt="Logo" />
+                        </a>
+                        
+                        <div class="collapse navbar-collapse" id="navBar">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active"><a class="nav-link" href="#hero">Sign up</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#features">Features</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#how-it-works">How it works</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#pricing">Pricing</a></li>
+                            </ul>
+                            <span class="navbar-text">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section id="hero">
+                <div class="row ">
+                    <div class="col-10 mr-1 align-self-center">
+                        <div class="row align-self-center">
+                            <div class="col-12 ">
+                                <h3 class="text-center">Handcrafted, home-made masterpieces</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row align-self-center">
+                            <div class="col-12 align-self-center">
+                                <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit"> 
+                                    <div class="form-group row ">
+                                        <div class="col-8 offset-2">
+                                            <input autofocus type="email" class="form-control text-left rightTab" name="email" id="email"
+                                                placeholder="Enter your email address" required />
+                                        </div>
+                                    </div>
+                                    <div class="row align-self-center">
+                                        <div class="col-6 offset-3 align-self-center">
+                                            <input id="submit" class="btn btn-warning rightTab" value="GET STARTED" type="submit" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            
+            <div class="container">
+                <section id="features">
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <hr>
+                            <h3 class="text-center"><strong>Features</strong></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row">
+                                <span class="col-9"></span>
+                                <span class="col-3 text-right"><i class="fa fa-3x fa-fire"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2>Premium Materials</h2>
+                            <p class="description">
+                                Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row">
+                                <span class="col-9"></span>
+                                <span class="col-3 text-right"><i class="fa fa-3x fa-truck"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2 class="text-bold">Fast Shipping</h2>
+                            <p class="description">
+                                We make sure you recieve your trombone as soon as we have finished making it. 
+                                We also provide free returns if you are not satisfied.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 align-self-right">
+                             <div class="row">
+                                <span class="col-9"></span>
+                                <span class="col-3 text-right"><i class="fa fa-3x fa-battery-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2>Quality Assurance</h2>
+                            <p class="description">
+                                For every purchase you make, we will ensure there are no damages or faults and we will check and test the 
+                                pitch of your instrument.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            
+
+                <section id="how-it-works">
+                    <div>
+                        <div class="row">
+                            <div class="col-8 offset-2">
+                                <hr>
+                                <h3 class="text-center"><strong>HOW IT WORKS</strong></h3>
+                            </div>
+                        </div>
+                        <div class="row align-self-center" >
+                            <div class="col-md-8 col-sm-12 offset-2 align-self-center">
+                                <iframe id="video" 
+                                    src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0"  
+                                    width="600"
+                                    height="400"
+                                    frameborder="0"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pricing">
+                    <div>
+                        <div class="row">
+                            <div class="col-8 offset-2">
+                                <hr>
+                                <h3 class="text-center"><strong>Pricing</strong></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="card type-of-product">
+                                    <h5 class="card-header" role="tab">TENOR TROMBONE</h5>
+                                    <div class="card-body text-center">
+                                        <p class="text-center"><strong>$900</strong></p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="btn btn-warning rightTab text-center">SELECT</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="card type-of-product">
+                                    <h5 class="card-header" role="tab">BASS TROMBONE</h5>
+                                    <div class="card-body text-center">
+                                        <p class="text-center"><strong>$1200</strong></p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="btn btn-warning rightTab text-center">SELECT</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="card type-of-product">
+                                    <h5 class="card-header" role="tab">VALVE TROMBONE</h5>
+                                    <div class="card-body text-center">
+                                        <p class="text-center"><strong>$600</strong></p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="text-center">Lorem ipsum</p>
+                                        <p class="btn btn-warning rightTab text-center">SELECT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="row">
+                        <div class="col-3 offset-9">
+                            <ul style="list-style: none;">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <li>
+                                            <a href="#">Privacy</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-4">
+                                        <li>
+                                            <a href="#">Terms</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-4">
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                            <span id="copyright-text">Copyright 2016, Orginal Trombones</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
+        
+    </body>
+</html>

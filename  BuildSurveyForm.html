@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <!--
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #4A148C;
+                text-align: center;
+                color: white;
+                min-width: 320px;
+                font-family: 'Raleway', Helvetica, sans-serif;
+            }
+
+            #main {
+                background-color: rgb(250, 250, 250);
+                margin: 0 auto;
+                width: 75%;
+                color: black;
+                max-width: 900px;
+                padding: 10px;
+                padding-top: 20px;
+                border-radius: 4px;
+            }
+
+            #title {
+                text-align: center;
+            }
+
+            .rightTab {
+                width: 60%;
+                border-radius: 0;
+            }        
+        </style>
+    </head>
+  
+    <body>
+        <h1 id="title">Survey Form</h1>
+        <div id="main">
+            <div class="form-group row">
+            <div class="col-12">
+                <p id="description">Let us know how we can improve freeCodeCamp</p>
+                <form id="survey-form" method="GET" action=""> 
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label id="name-label" for="name" class="col-form-label"> * Name: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <input autofocus type="text" class="form-control rightTab" name="name" id="name"
+                                placeholder="Enter your name here" required />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label id="email-label" for="email"> * Email: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <input autofocus type="email" class="form-control rightTab" name="email" id="email"
+                                placeholder="Enter your email" required />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label id="number-label" for="number"> * Age: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <input autofocus type="number" class="form-control rightTab" min="1" max="125" name="age" id="number"
+                                placeholder="Age" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label for="currentPos">Which option best describe your current role? </label>
+                        </div>
+                        <div class="col-6 text-left"> 
+                            <select autofocus type="text"  class="form-control rightTab" name="currrentPos" id="dropdown" >
+                                <option disabled value>Select an option</option>
+                                <option value="student">Student</option>
+                                <option value="job">Full Time Job</option>
+                                <option value="learner">Full Time Learner</option>
+                                <option value="preferNo">Prefer not to say</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="radio-buttons"  class="form-check-input"  value="1" type="radio"  >
+                                    Definitely
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="radio-buttons"  class="form-check-input"  value="2" type="radio"  >
+                                    Maybe
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="radio-buttons" class="form-check-input"  value="3" type="radio"  >
+                                    Not sure
+                                </label>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label for="most-like">What do you like most in FCC: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <select id="most-like" class="form-control rightTab" name="mostLike" class="dropdown">
+                                <option disabled selected value>Select an option </option>
+                                <option value="challenges">Challenges</option>
+                                <option value="projects">Projects</option>
+                                <option value="community">Community</option>
+                                <option value="openSource">Open Source</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label for="preferences"> 
+                                Things that should be improved in the future
+                                <br>
+                                (Check all that apply):
+                            </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="1" type="checkbox" >
+                                    Front-end Projects
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="2" type="checkbox">
+                                    Back-end Projects
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="3" type="checkbox" >
+                                    Data Visualization
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="4" type="checkbox" >
+                                    Challenges
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="5" type="checkbox">
+                                    Open Source Community
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="6" type="checkbox">
+                                    Gitter help rooms
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="7" type="checkbox">
+                                    Videos
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="1" type="checkbox">
+                                    City Meetups
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="1" type="checkbox">
+                                    Wiki
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="1" type="checkbox">
+                                    Forum
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <label class="form-check-label">
+                                    <input name="prefer" class="form-check-input" value="1" type="checkbox">
+                                    Additional Courses
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6 text-right">
+                            <label id="name-label" for="name">Any Comments or Siggestions?: </label>
+                        </div>
+                        <div class="col-6 text-left">
+                            <textarea autofocus type="text" class="form-control rightTab" rows="12" style="height: 50px; resize:vertical;" name="comment" id="comments" class="input-field"
+                                placeholder="Enter your comment here..." >
+                            </textarea>
+                        </div>
+                    </div>
+                    <button id="submit" class="btn btn-primary text-center" type="submit">Submit</button>   
+                                                                                                                                              
+                </form>
+                </div> 
+            </div> 
+        </div>
+        <!--
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
+        -->
+    </body>
+</html>
